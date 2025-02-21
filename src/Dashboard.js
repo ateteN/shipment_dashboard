@@ -38,7 +38,7 @@ export default function Dashboard() {
   const [shipments, setShipments] = useState(mockShipments);
 
   useEffect(() => {
-    const socket = new WebSocket("wss://example.com/shipment-updates");
+    const socket = new WebSocket("ws://localhost:8080");
     socket.onmessage = (event) => {
       const updatedShipment = JSON.parse(event.data);
       setShipments((prev) => prev.map(s => s.id === updatedShipment.id ? updatedShipment : s));
