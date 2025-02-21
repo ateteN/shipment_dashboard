@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: white; /* Light mode */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+html.dark {
+  background-color: #333; /* Dark mode background */
+}
+
+body {
+  transition: color 0.3s ease;
+  color: black; /* Default text color */
+}
+
+body.dark {
+  color: white; /* Dark mode text color */
+}
