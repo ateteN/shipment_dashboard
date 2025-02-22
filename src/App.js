@@ -1,11 +1,8 @@
-import React from 'react';
-import './App.css';
-import Dashboard from './Dashboard';  // Import the Dashboard component
-
+import Home from "./pages/home/Home";
 function App() {
   return (
     <div className="App">
-      <Dashboard />  {/* Render the Dashboard component */}
+      <Home/>
     </div>
   );
 }
