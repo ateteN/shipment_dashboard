@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom"; // ✅ Import Router components
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import "./style/dark.scss"
 import { DarkModeContext } from "./context/darkModeContext";
