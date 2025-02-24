@@ -22,9 +22,10 @@ const Sidebar = () => {
                 <p className="title">OTHER</p>
                 <li>
                     <LocalShippingIcon className="icon" />
-                    <span>Delivery</span>
+                    <span>Shipments</span>
                 </li>
             </ul>
+        <p className="title">COLOR THEME</p>
         </div>
         <div className="bottom">
         <div className="colorOption" onClick={()=> dispatch({type:"LIGHT"})}></div>
