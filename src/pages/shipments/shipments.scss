@@ -1,0 +1,54 @@
+.shipment{
+    display: flex;
+    width: 100%;
+}
+.shipmentContainer {
+    padding: 0;
+    background-color: white;
+    flex: 4;
+  }
+  
+  .shipmentTable {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse; 
+      th, td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+    }
+    .status {
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .shipped {
+      background-color: yellow;
+      color: #333;
+    }
+    .in-transit {
+      background-color: orange;
+      color: white;
+    }
+    .delivered {
+      background-color: green;
+      color: white;
+    }
+    .pending {
+      background-color: red;
+      color: white;
+    }
+  }
+  
