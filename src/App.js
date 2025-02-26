@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
 import { DarkModeContext } from "./context/darkModeContext";
 import "./style/dark.scss";
-import Shipments from "./pages/shipments/Shipments";
+
+const Home = lazy(() => import("./pages/home/Home"));
+const Shipments = lazy(() => import("./pages/shipments/Shipments"));
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -11,10 +12,12 @@ function App() {
   return (
     <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} /> 
-          <Route path="shipments" element={<Shipments />} />
-        </Routes>
+        <Suspense fallback={<div className="loading">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shipments" element={<Shipments />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </div>
   );
